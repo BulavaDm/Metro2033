@@ -1,0 +1,50 @@
+* {
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: Downcome;
+    src: url("../fonts/18035.otf");
+}
+
+body {
+    font-family: Downcome;
+    margin: 0;
+}
+
+ol, ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+button {
+    border: none;
+    margin: 0;
+    padding: 0;
+    width: auto;
+    background: transparent;
+    color: inherit;
+    font: inherit;
+}
+
+button:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+    letter-spacing: 1px;
+}
+
+p, figure {
+    margin: 0;
+    padding: 0;
+}
+
+.section {
+    height: 100vh;
+    background-color: #110D0C;
+}
