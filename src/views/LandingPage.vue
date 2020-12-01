@@ -1,22 +1,23 @@
 <template>
     <div>
         <header class="header">
-            <a href="#" class="header__logo" :class="{ active: activeMenu === 0 }" @click="activeMenu = 0">
-                <img src="../assets/images/icon.png" alt="Icon">
-            </a>
+            <router-link :to="{ name: 'Landing' }" class="header__logo">
+                <img src="../assets/images/icon.png" alt="Icon">        
+            </router-link>
+
             <nav class="header__menu">
-                <a href="#history" :class="{ active: activeMenu === 1 }" @click="activeMenu = 1">
+                <router-link :to="{ name: 'Landing', hash: '#history' }">
                     <span>И</span><span>с</span><span>т</span><span>о</span><span>р</span><span>и</span><span>я</span>
-                </a>
-                <a href="#heroes" :class="{ active: activeMenu === 2 }" @click="activeMenu = 2">
+                </router-link>
+                <router-link :to="{ name: 'Landing', hash: '#heroes' }">
                     <span>Г</span><span>е</span><span>р</span><span>о</span><span>и</span>
-                </a>
-                <a href="#fractions" :class="{ active: activeMenu === 3 }" @click="activeMenu = 3">
+                </router-link>
+                <router-link :to="{ name: 'Landing', hash: '#fractions' }">
                     <span>Ф</span><span>р</span><span>а</span><span>к</span><span>ц</span><span>и</span><span>и</span>
-                </a>
-                <a href="#rules" :class="{ active: activeMenu === 4 }" @click="activeMenu = 4">
+                </router-link>
+                <router-link :to="{ name: 'Landing', hash: '#rules' }">
                     <span>П</span><span>р</span><span>а</span><span>в</span><span>и</span><span>л</span><span>а</span>
-                </a>
+                </router-link>
             </nav>
 
             <div class="header__control">
@@ -143,7 +144,7 @@ export default {
                 transition-delay: 0.3s;
             } 
 
-            .active span {
+            .router-link-active span {
                 font-weight: 1000;
                 color: #FFFFFF;
             }
